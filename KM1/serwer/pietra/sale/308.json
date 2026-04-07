@@ -1,0 +1,9 @@
+[ {
+  "data_rezerwacji" : "2026-04-09",
+  "poczatek_rezerwacji" : "9:00",
+  "koniec_rezerwacji" : "11:00"
+}, {
+  "data_rezerwacji" : "2026-04-09",
+  "poczatek_rezerwacji" : "12:00",
+  "koniec_rezerwacji" : "13:30"
+} ]
