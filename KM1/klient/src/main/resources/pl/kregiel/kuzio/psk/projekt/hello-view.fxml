@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pl.kregiel.kuzio.psk.projekt.HelloController">
+    <padding>
+        <Insets left="20.0" right="20.0"/>
+    </padding>
+    <Label text="Proszę wybrać piętro" style="-fx-font-size: 30px; -fx-font-weight: bold;"/>
+    <Button fx:id="pietro_1" style="-fx-font-size: 20px;" text="Piętro 1" onAction="#handle_pietro"/>
+    <Button fx:id="pietro_2" style="-fx-font-size: 20px;" text="Piętro 2" onAction="#handle_pietro"/>
+    <Button fx:id="pietro_3" style="-fx-font-size: 20px;" text="Piętro 3" onAction="#handle_pietro"/>
+    <Button fx:id="pietro_4" style="-fx-font-size: 20px;" text="Piętro 4" onAction="#handle_pietro"/>
+    <Button fx:id="pietro_5" style="-fx-font-size: 20px;" text="Piętro 5" onAction="#handle_pietro"/>
+</VBox>
