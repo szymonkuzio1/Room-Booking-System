@@ -1,10 +1,9 @@
 package pl.kregiel.kuzio.psk.projekt.dto;
 
+// klasa reprezentująca odpowiedź na żądanie rezerwacji
 public class Rezerwacja_Response {
     private boolean status;
     private String odpowiedz;
-
-    public Rezerwacja_Response() {}
 
     public Rezerwacja_Response(boolean status, String odpowiedz) {
         this.status = status;

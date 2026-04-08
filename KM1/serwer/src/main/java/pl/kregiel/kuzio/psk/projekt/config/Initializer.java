@@ -18,9 +18,11 @@ public class Initializer {
 
     @PostConstruct
     public void init() throws Exception {
+        // utworzenie katalogu "piętra" oraz podkatalogu "sale"
         Path pietra_sciezka = Path.of("pietra");
         Path sale_sciezka = pietra_sciezka.resolve("sale");
 
+        // utworzenie plików .json dla każdego piętra
         if (!Files.exists(pietra_sciezka)) {
             Files.createDirectories(pietra_sciezka);
         }
@@ -33,18 +35,18 @@ public class Initializer {
         utworz_pietro(4, 401, 420);
         utworz_pietro(5, 501, 520);
     }
+
     private void utworz_pietro(int pietro, int sala_poczatek, int sala_koniec) throws Exception {
         Path plik_pietro_sciezka = Path.of("pietra", "pietro_" + pietro + ".json");
+        // dodanie sal do każdego piętra
         if(!Files.exists(plik_pietro_sciezka)) {
             List<Integer> sale = new ArrayList<>();
 
-            for(int sala = sala_poczatek; sala <= sala_koniec; sala++) {
+            for(int sala=sala_poczatek; sala<=sala_koniec; sala++) {
                 sale.add(sala);
             }
 
-            objectMapper
-                    .writerWithDefaultPrettyPrinter()
-                    .writeValue(plik_pietro_sciezka.toFile(), sale);
+            objectMapper.writeValue(plik_pietro_sciezka.toFile(), sale);
         }
     }
 }

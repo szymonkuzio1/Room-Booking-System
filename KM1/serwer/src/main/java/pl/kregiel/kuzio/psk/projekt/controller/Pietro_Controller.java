@@ -13,7 +13,7 @@ public class Pietro_Controller {
     }
 
     @GetMapping("/{pietro}/sale")
-    public List<Integer> pobierzSale(@PathVariable int pietro) throws Exception {
+    public List<Integer> pobierz_sale(@PathVariable int pietro) throws Exception {
         return pietro_service.sale(pietro);
     }
 }

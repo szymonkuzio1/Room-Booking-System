@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
+// klasa umożliwiająca odczyt listy sal na danym piętrze
 @Service
 public class Pietro_Service {
     private ObjectMapper objectMapper;
@@ -15,6 +16,7 @@ public class Pietro_Service {
         this.objectMapper = objectMapper;
     }
 
+    // wypisanie listy sal na danym piętrze
     public List<Integer> sale(int pietro) throws Exception {
         Path pietro_path = Path.of("pietra", "pietro_" + pietro + ".json");
         return objectMapper.readValue(

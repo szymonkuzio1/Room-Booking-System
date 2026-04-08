@@ -1,5 +1,6 @@
 package pl.kregiel.kuzio.psk.projekt.model;
 
+// klasa reprezentująca pojedynczą rezerwację
 public class Rezerwacja {
     private String data_rezerwacji;
     private String poczatek_rezerwacji;
