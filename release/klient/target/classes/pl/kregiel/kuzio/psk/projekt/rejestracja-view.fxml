@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.kregiel.kuzio.psk.projekt.RejestracjaController">
+    <padding>
+        <Insets left="20.0" right="20.0" />
+    </padding>
+    <Label style="-fx-font-size: 20px;" fx:id="komunikat"/>
+    <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0">
+        <children>
+            <Label style="-fx-font-size: 20px;" text="Login:" />
+            <TextField fx:id="login_field" style="-fx-font-size: 20px;" prefHeight="20.0" prefWidth="200.0" />
+        </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0">
+        <children>
+            <Label style="-fx-font-size: 20px;" text="e-mail:" />
+            <TextField fx:id="email_field" style="-fx-font-size: 20px;" prefHeight="20.0" prefWidth="200.0" />
+        </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0">
+        <children>
+            <Label style="-fx-font-size: 20px;" text="Hasło:" />
+            <PasswordField fx:id="haslo_field" style="-fx-font-size: 20px;" prefHeight="20.0" prefWidth="200.0" />
+        </children>
+    </HBox>
+    <Button onAction="#handle_rejestracja" style="-fx-font-size: 20px;" text="Zarejestruj" />
+    <ImageView fx:id="qr_obraz"
+               fitWidth="150"
+               fitHeight="150"
+               preserveRatio="true"
+               visible="false" />
+
+    <Label fx:id="qr_komunikat"
+           text=""
+           style="-fx-font-size: 16px;" />
+
+    <Button onAction="#handle_wstecz" style="-fx-font-size: 20px;" text="Wstecz" />
+</VBox>
