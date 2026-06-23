@@ -24,19 +24,19 @@ class TotpUtil_Test {
     @Test
     void test_generateTotpUri() {
         String secret = "JBSWY3DPEHPK3PXP";
-        String uri = TotpUtil.generateTotpUri("SystemRezerwacji", "jan", secret);
+        String uri = TotpUtil.generateTotpUri("SystemRezerwacji", "jkowalski", secret);
 
         // powinno zawierać dane
         assertTrue(uri.startsWith("otpauth://totp/"));
         assertTrue(uri.contains("SystemRezerwacji"));
-        assertTrue(uri.contains("jan"));
+        assertTrue(uri.contains("jkowalski"));
         assertTrue(uri.contains(secret));
     }
 
     @Test
     void test_generateQrCode() {
         String secret = "JBSWY3DPEHPK3PXP";
-        String uri = TotpUtil.generateTotpUri("SystemRezerwacji", "jan", secret);
+        String uri = TotpUtil.generateTotpUri("SystemRezerwacji", "jkowalski", secret);
         String qr = TotpUtil.generateQrCode(uri);
 
         // powinien zwrócić Base64 kodu QR
